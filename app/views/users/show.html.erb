@@ -7,6 +7,7 @@
       </h1>
     </section>
       <%= link_to "followers", followers_user_path(@user) %>
+      <%= link_to "following", following_user_path(@user) %>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
