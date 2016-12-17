@@ -32,4 +32,7 @@ class User < ActiveRecord::Base
   def feed_items
     Micropost.where(user_id: following_user_ids + [self.id])
   end
+  validates :password, presence: true, length: { minimum: 4 }, allow_nil: true
+  validates :profile, allow_blank: true, length: { maximum: 255 }
+  validates :locate, allow_blank: true, length: { maximum: 50 }
 end

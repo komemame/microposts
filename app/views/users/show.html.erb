@@ -4,6 +4,12 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <br>
+        profile
+        <%= @user.profile %>
+        <br>
+        locate
+        <%= @user.locate %>
       </h1>
     </section>
       <%= link_to "followers", followers_user_path(@user) %>
@@ -19,3 +25,4 @@
     <% end %>
   </div>
 </div>
+
